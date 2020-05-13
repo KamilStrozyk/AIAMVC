@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AIAMVC.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,12 +12,20 @@ namespace AIAMVC.Controllers
         // GET: Songs
         public ActionResult Index()
         {
-            return Content("Hello World");
+            var model = new Song
+            {
+                Id = 0,
+                Name = "Fear of The Dark",
+                Artist = "Iron Maiden",
+                Genre = "Heavy Metal"
+            };
+            //return Content("Hello World");
+            return View(model);
         }
 
         public ActionResult Square(int id)
         {
-            return Content((id*id).ToString());
+            return Content((id * id).ToString());
         }
     }
 }

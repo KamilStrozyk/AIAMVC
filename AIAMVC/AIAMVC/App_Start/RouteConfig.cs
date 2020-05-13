@@ -16,7 +16,7 @@ namespace AIAMVC
             routes.MapRoute(
                 name: "AppRoot",
                 url: "",
-                 defaults: new { controller = "Songs", action = "Square", id = 23 }
+                 defaults: new { controller = "Songs", action = "Index", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(
